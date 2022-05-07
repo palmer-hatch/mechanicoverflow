@@ -9,7 +9,7 @@ A learning resource where industrial mechanics can post questions to the communi
 <li>User can answer posted questions</li>
 <li>User can up vote and down vote responses</li>
 <li>Navigation bar to navigate the main page</li>
-N<li>avigation bar to choose between industry pages</li>
+<li>avigation bar to choose between industry pages</li>
 </ul>
 
 **Pages**
