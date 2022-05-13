@@ -24,3 +24,5 @@ A learning resource where industrial mechanics can post questions to the communi
 <li>Filter by tags</li>
 <li>form submission</li>
 <li>posting previous forms from db</li>
+
+Thanks for Reading!
