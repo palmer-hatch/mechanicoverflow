@@ -1,8 +1,13 @@
 import React from 'react'
+import AccessDB from '../Components/AccessDB'
 
 function PosedQandAScreen() {
   return (
-    <div>PosedQandAScreen</div>
+    <div>PosedQandAScreen
+
+      <AccessDB></AccessDB>
+    </div>
+
   )
 }
 

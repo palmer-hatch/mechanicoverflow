@@ -17,6 +17,9 @@ function App() {
           <LinkContainer to='/'>
       <Navbar.Brand>Mechanic Overflow</Navbar.Brand>
       </LinkContainer>
+      <LinkContainer to='/PosedQandAScreen'>
+      <Navbar.Brand> QandA </Navbar.Brand>
+      </LinkContainer>
       </Container>
       </Navbar>
     </header>
