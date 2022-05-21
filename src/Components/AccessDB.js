@@ -4,14 +4,14 @@ import axios from 'axios';
 
 function AccessDB() {
 
-    const [username, setUsername] = useState('')
+    const [username, setUsername] = useState([])
     const [trade, setTrade] = useState('')
   
   const dbPrompt = () => {
       axios.get('/api/info')
       .then((res)=> {
           console.log(res.data)
-        setUsername(res.data.username)
+        setUsername(res.data)
         setTrade(res.data.trade)
       })
       .catch((err)=> {
@@ -22,8 +22,11 @@ function AccessDB() {
   
     return (
     <div>AccessDB
-        <h2>{username ? username: 'No Username ...'}</h2>
+        {username && username.map((user,index) =>{
+            return <h2>{user.username}</h2>
+        }) }
         <h3>{trade ? trade : 'no Trade...'}</h3>
+        
 
         <button onClick={dbPrompt}>Access that DBSON</button>
     </div>

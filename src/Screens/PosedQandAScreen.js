@@ -1,11 +1,16 @@
 import React from 'react'
 import AccessDB from '../Components/AccessDB'
+import DbPullQandA from '../Components/DbPullQandA'
+import QuestionPose from '../Components/QuestionPose'
 
 function PosedQandAScreen() {
   return (
     <div>PosedQandAScreen
 
-      <AccessDB></AccessDB>
+      
+      <DbPullQandA></DbPullQandA>
+      <span><QuestionPose></QuestionPose></span>
+      <span><AccessDB></AccessDB></span>
     </div>
 
   )
