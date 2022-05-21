@@ -2,7 +2,7 @@ import React from 'react'
 import HomeCard from './HomeCard'
 import axios from 'axios'
 import { useState, useEffect } from 'react'
-import homeData from '../../server/homeData'
+import homeData from '../homeData'
 
 function HomeTileDisp() {
   
@@ -18,13 +18,17 @@ function HomeTileDisp() {
   
   
     return (
-        <div>tileDsp
+        <div>
         
-        <h2>answers</h2>
-       {data.map((element,index)=> {
-            return <HomeCard data={element} key={index}/>
+        <h1>Topics</h1>
+       {homeData.topics.map(t => (<div>
+            <img src={t.imgUrl} alt={t.name} />
+            <p>{t.name}</p>
+            </div> ))
+       }
+            
         
-        })}
+       
         
 
 

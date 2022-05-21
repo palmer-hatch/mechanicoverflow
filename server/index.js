@@ -5,7 +5,7 @@ const app = express()
 require('dotenv').config()
 const PORT = process.env.PORT || 4000
 const sequelize = require('./sequelize')
-const homeData = require ("./homeData.js")
+const homeData = require ("../src/homeData.js")
 
 
 //middleware
