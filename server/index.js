@@ -42,6 +42,22 @@ app.get('/api/a', async (req,res) => {
     `)
     res.status(200).send(info[0])
 })
+
+
+app.post('/api/submitQ', async (req,res)=> {
+    console.log(req.body)
+    let info = await sequelize.query(`
+    insert INTO equipmentQ (tag, qText, qdate, equipmentName, userid)
+     VALUES(
+     '${req.body.tags}',
+     '${req.body.body}',
+     '2021-12-23',
+     '${req.body.title}',
+     ${req.body.userId}
+     )
+    `)
+    res.status(200).send('data received')
+})
 // app.get('/*', function(req,res) {
 //     res.sendFile(path.join(__dirname, '../build', 'index.html'))
 // })

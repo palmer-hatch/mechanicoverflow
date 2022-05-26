@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import axios from 'axios';
 import Qcard from './Qcard';
 import Acard from './Acard';
+import { Card, CardActionArea, CardContent, CardMedia, Typography, Grid, Paper, Container } from '@mui/material'
 
 function DbPullQandA() {
 
@@ -59,23 +60,31 @@ function DbPullQandA() {
 
     
     return (
-        <div>AccessDB
-        {/* <h2>Questions</h2>
-        {question.map((element,index)=> {
-            return <Qcard data={element} key={index}/> 
         
-        })}*/}
-        <h2>answers</h2>
+        
+       <div>
+        
+         <Container maxWidth="lg">
+           <Grid>
+             <Grid>
+               <Card >
+                 <CardActionArea style={{backgroundColor: "#424242"}}>
+                   <CardContent>
+                  <Typography variant="h2" color="primary" >Equipment Questions</Typography>
        {masterArr.map((element,index)=> {
             return <Acard data={element} key={index}/>
         
         })}
+                  </CardContent>
+                </CardActionArea>
+              </Card>
+            </Grid>
+          </Grid>
+        </Container>
+
+</div>
         
-
-
-
-        
-    </div>
+   
   )
 }
 

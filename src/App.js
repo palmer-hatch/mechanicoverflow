@@ -6,41 +6,34 @@ import HomeScreen from "./Screens/HomeScreen"
 import PosedQandAScreen from './Screens/PosedQandAScreen'
 import Container from 'react-bootstrap/Container';
 import  {LinkContainer}  from 'react-router-bootstrap';
+import {ThemeProvider} from '@emotion/react'
+import {  Typography, } from '@mui/material';
+import TopMenu from './Components/TopMenu';
+import DbPullQandA from './Components/DbPullQandA';
+
+
 
 function App() {
   return (
-    <BrowserRouter>
+    
+   
     <div className="App">
-       <header>
-      <Navbar bg='dark' variant='dark'>
-        <Container>
-          <LinkContainer to='/'>
-      <Navbar.Brand>Mechanic Overflow</Navbar.Brand>
-      </LinkContainer>
-      <LinkContainer to='/PosedQandAScreen'>
-      <Navbar.Brand> QandA </Navbar.Brand>
-      </LinkContainer>
-      </Container>
-      </Navbar>
-    </header>
+       
+      <TopMenu>
       
-      <main>
-      <Container>
+      </TopMenu>
+
         <Routes>
           <Route path="/" element={<HomeScreen/>}/>
           <Route path="/PosedQandAScreen" element={<PosedQandAScreen/>}/>
-            
-          
+          <Route path="/Equipment" element={<DbPullQandA/>}/>
         </Routes>
-      </Container>
-        
-      
-        </main>
         <footer>
-          <div>All Rights Reserved</div>
+          <Typography color="white" variant='h8'>All rights reserved</Typography>
         </footer>
+       
     </div>
-    </BrowserRouter>
+    
   );
 }
 
